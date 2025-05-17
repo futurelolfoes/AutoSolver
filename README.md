@@ -35,8 +35,8 @@ The Google Form Solver is a Chrome extension designed to automatically answer qu
 4.  Click the **"Load unpacked"** button (usually in the top-left corner).
 5.  In the file dialog that appears, select the **folder** where you saved all the extension files (`manifest.json`, `popup.html`, etc.).
 6.  The "Google Form Solver" extension should now appear in your list of extensions and its icon should be visible in the Chrome toolbar.
-OR
-Download from Google Chrome Webstore
+**OR**
+**Download from Google Chrome Webstore**
 
 ## How to Use
 
