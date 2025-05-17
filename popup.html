@@ -1,21 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Solver</title>
-  <style>
-    body { font-family: sans-serif; width: 250px; padding: 10px; }
-    input[type="text"], button { width: 95%; margin-bottom: 10px; padding: 8px; }
-    button { cursor: pointer; }
-    .status { font-size: 0.9em; color: #333; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/popup.css">
 </head>
 <body>
-  <h3>Google Form Solver</h3>
-  <label for="apiKey">Gemini API Key:</label>
-  <input type="text" id="apiKey" placeholder="Enter your API Key">
-  <button id="saveKey">Save API Key</button>
-  <button id="startSolving">Start Solving</button>
-  <div id="status" class="status"></div>
-  <script src="popup.js"></script>
+
+  <div class="popup-container">
+    <div class="header">
+        <img src="icons/icon_48.png" alt="Form Solver Logo" class="header-logo-img">
+        <h3 class="header-title">
+            Google Form Solver
+        </h3>
+    </div>
+
+    <div class="form-group">
+      <label for="apiProvider" class="form-label">Select API Provider:</label>
+      <select id="apiProvider" class="form-select">
+        <option value="gemini">Google Gemini</option>
+        <option value="chatgpt">OpenAI ChatGPT (Currently Not Working)</option>
+      </select>
+    </div>
+
+    <div id="geminiApiKeySection" class="api-key-section"> 
+      <label for="geminiApiKey" class="form-label">Gemini API Key:</label>
+      <input type="password" id="geminiApiKey"
+             class="form-input"
+             placeholder="Enter Gemini API Key">
+    </div>
+
+    <div id="chatGptApiKeySection" class="api-key-section hidden-by-default"> 
+      <label for="chatGptApiKey" class="form-label">ChatGPT API Key:</label>
+      <input type="password" id="chatGptApiKey"
+             class="form-input"
+             placeholder="Enter ChatGPT API Key (OpenAI)">
+    </div>
+
+    <button id="saveKeys" class="button button-primary">
+      Save API Keys & Settings
+    </button>
+    <button id="startSolving" class="button button-secondary">
+      Start Solving
+    </button>
+
+    <div id="status" class="status-message">
+      </div>
+  </div>
+
+  <script src="js/popup.js"></script>
 </body>
 </html>

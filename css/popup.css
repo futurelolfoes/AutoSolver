@@ -1,0 +1,180 @@
+/* css/popup.css */
+/* Global Resets and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    background-color: transparent; /* Makes the HTML root transparent */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  width: 360px; 
+  min-height: 320px; 
+  background-color: transparent !important; /* Ensures body is transparent for the popup window effect */
+  overflow: hidden; /* Prevents scrollbars if content slightly overflows */
+  margin: 0;
+  padding: 0; /* Body padding removed to let container define shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%; /* Allows container to fill the body if body padding is 0 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff; /* White background for the actual popup content */
+  padding: 1.5rem; /* 24px */
+  border-radius: 2.5rem; /* Very rounded corners for the popup content area */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.header-logo-img {
+  width: 2.25rem; /* 36px */
+  height: 2.25rem; /* 36px */
+  margin-right: 0.5rem; /* 8px */
+}
+
+.header-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  color: #4f46e5; /* Indigo-600 */
+}
+
+.form-group, 
+.api-key-section { /* Class for API key sections for consistent margin */
+  margin-bottom: 1rem; /* Adjusted from 1.25rem for tighter spacing */
+}
+
+
+.form-label {
+  display: block;
+  margin-bottom: 0.25rem; /* 4px */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #4b5563; /* Gray-600 */
+}
+
+.form-input,
+.form-select { /* Shared styling for input and select */
+  background-color: #f9fafb; /* Gray-50 */
+  border: 1px solid #d1d5db; /* Gray-300 */
+  color: #111827; /* Gray-900 */
+  font-size: 0.875rem; /* 14px */
+  border-radius: 0.75rem; /* Rounded corners for form elements */
+  display: block;
+  width: 100%;
+  padding: 0.625rem 0.75rem; /* 10px 12px */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input::placeholder {
+  color: #9ca3af; /* Gray-400 */
+  opacity: 1;
+}
+
+.form-input:focus,
+.form-select:focus { /* Shared focus styling */
+  border-color: #6366f1; /* Indigo-500 */
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo-500 with opacity */
+}
+
+.button {
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem; /* Rounded corners for buttons */
+  font-size: 0.875rem; /* 14px */
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+.button:active {
+  transform: translateY(0px);
+  box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+}
+.button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo-500 with opacity */
+}
+
+.button-primary {
+  background-color: #4f46e5; /* Indigo-600 */
+  margin-bottom: 0.75rem; /* 12px */
+}
+.button-primary:hover {
+  background-color: #4338ca; /* Indigo-700 */
+}
+
+.button-secondary { /* "Start Solving" button */
+  background-color: #16a34a; /* Green-600 for differentiation */
+}
+.button-secondary:hover {
+  background-color: #15803d; /* Green-700 */
+}
+
+/* Utility class for initially hiding elements (like the ChatGPT API key section) */
+.hidden-by-default {
+  display: none;
+}
+
+/* Status Message Base and Animation */
+.status-message {
+  margin-top: 1rem; /* 16px */
+  font-size: 0.875rem; /* 14px */
+  text-align: center;
+  padding: 0.625rem; /* 10px */
+  border-radius: 0.75rem; /* Rounded corners for status message */
+  border-width: 1px;
+  border-style: solid;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s linear 0.3s; /* Delay visibility change for fade out */
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden; /* Start hidden and non-interactive */
+}
+
+.status-message.status-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition-delay: 0s; /* Apply visibility change immediately when becoming visible */
+}
+
+/* Status Message Types */
+.status-info {
+  background-color: #eff6ff; /* Blue-50 */
+  color: #2563eb; /* Blue-600 */
+  border-color: #bfdbfe; /* Blue-200 */
+}
+.status-success {
+  background-color: #f0fdf4; /* Green-50 */
+  color: #16a34a; /* Green-600 */
+  border-color: #bbf7d0; /* Green-200 */
+}
+.status-error {
+  background-color: #fef2f2; /* Red-50 */
+  color: #dc2626; /* Red-600 */
+  border-color: #fecaca; /* Red-200 */
+}
