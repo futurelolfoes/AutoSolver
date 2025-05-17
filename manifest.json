@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Future's Google Form Solver",
+  "version": "0.0.2",
+  "description": "Automatically solves Google Forms using Gemini API.For COMPLETELY free.",
+  "permissions": [
+    "storage",      // To store the API key
+    "activeTab",    // To interact with the current active tab (Google Form)
+    "scripting",    // To inject content scripts
+    "identity"      // Potentially useful for future auth, but 'storage' is primary for API key here
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/",
+    "https://generativelanguage.googleapis.com/" // For Gemini API calls
+    // You might need to add "https://docs.google.com/forms/*" if you make direct fetches from content script,
+    // but it's better to do API calls from background.
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon_16.png",
+      "48": "icons/icon_48.png",
+      "128": "icons/icon_128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/forms/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle" // Run after the page is mostly loaded
+    }
+  ],
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  }
+}

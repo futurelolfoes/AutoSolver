@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Solver</title>
+  <style>
+    body { font-family: sans-serif; width: 250px; padding: 10px; }
+    input[type="text"], button { width: 95%; margin-bottom: 10px; padding: 8px; }
+    button { cursor: pointer; }
+    .status { font-size: 0.9em; color: #333; }
+  </style>
+</head>
+<body>
+  <h3>Google Form Solver</h3>
+  <label for="apiKey">Gemini API Key:</label>
+  <input type="text" id="apiKey" placeholder="Enter your API Key">
+  <button id="saveKey">Save API Key</button>
+  <button id="startSolving">Start Solving</button>
+  <div id="status" class="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
