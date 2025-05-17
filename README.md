@@ -27,7 +27,23 @@ The Google Form Solver is a Chrome extension designed to automatically answer qu
 5.  Copy the generated API key. You will need this for the extension.
 6.  **Security:** Keep your API key confidential. Do not share it publicly or commit it to version control if you are managing this project with Git.
 
-### 2. Load the Extension in Chrome
+### 2. Prepare the Extension Files
+
+You should have the following files in a single project folder:
+
+* `manifest.json` (Configures the extension)
+* `popup.html` (The UI for the extension's popup)
+* `popup.js` (Handles logic for the popup)
+* `content.js` (Injects into Google Form pages to scrape and fill)
+* `background.js` (Handles API calls and communication)
+* An `icons` folder containing:
+    * `icon_16.png`
+    * `icon_48.png`
+    * `icon_128.png`
+
+
+
+### 3. Load the Extension in Chrome
 
 1.  Open Google Chrome.
 2.  Navigate to `chrome://extensions/` in the address bar.
@@ -35,8 +51,6 @@ The Google Form Solver is a Chrome extension designed to automatically answer qu
 4.  Click the **"Load unpacked"** button (usually in the top-left corner).
 5.  In the file dialog that appears, select the **folder** where you saved all the extension files (`manifest.json`, `popup.html`, etc.).
 6.  The "Google Form Solver" extension should now appear in your list of extensions and its icon should be visible in the Chrome toolbar.
-**OR**
-**Download from Google Chrome Webstore**
 
 ## How to Use
 
