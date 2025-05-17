@@ -1,3 +1,11 @@
+# Future's Google Form Solver - Chrome Extension / ส่วนขยาย Chrome
+
+**Table of Contents**
+* [English Version](#futures-google-form-solver---chrome-extension)
+* [Thai Version (ฉบับภาษาไทย)](#futures-google-form-solver---ส่วนขยาย-chrome-ฉบับภาษาไทย)
+
+---
+
 # Future's Google Form Solver - Chrome Extension
 
 ## Project Overview
@@ -54,10 +62,10 @@ You should have the following files in a single project folder:
 
 ## How to Use
 
-1.  **Enter API Key:**
+1.  **ป้อน API Key:**
     * Click on the Google Form Solver extension icon in your Chrome toolbar.
     * A popup will appear. Paste your Google Gemini API key into the "Gemini API Key:" input field.
-    * Click the "Save API Key" button. You should see a confirmation message. This key is stored locally using `chrome.storage.local`.
+    * Click the "Save API Key" button. You should see a confirmation message. This key is stored locally using `chrome.storage.local`
 2.  **Navigate to a Google Form:**
     * Open any Google Form in a Chrome tab that you wish to use the extension on.
 3.  **Start Solving:**
@@ -119,6 +127,9 @@ By understanding these aspects, you can better use, maintain, and troubleshoot t
 ### DISCLAIMER
 
 **I am NOT entitled for what the extension is used for. I do not condone cheating in any way. I am also not responsible for any bad scores or inaccuracies made by the extension as that is because of google gemini NOT ME.**
+
+---
+---
 
 # Future's Google Form Solver - ส่วนขยาย Chrome (ฉบับภาษาไทย)
 
@@ -241,4 +252,3 @@ Google Form Solver เป็นส่วนขยายของ Chrome ที�
 ### ข้อจำกัดความรับผิดชอบ (DISCLAIMER)
 
 **ผมไม่มีส่วนเกี่ยวข้องหรือรับผิดชอบต่อการนำส่วนขยายนี้ไปใช้งานในทางใดๆ ผมไม่สนับสนุนการทุจริตในทุกรูปแบบ นอกจากนี้ ผมจะไม่รับผิดชอบต่อคะแนนที่ไม่ดีหรือความไม่ถูกต้องใดๆ ที่เกิดจากส่วนขยาย เนื่องจากนั่นเป็นผลมาจาก Google Gemini ไม่ใช่ตัวผม**
-
