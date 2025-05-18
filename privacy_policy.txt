@@ -1,0 +1,64 @@
+# Privacy Policy for Future's Google Form Solver Chrome Extension
+
+**Last Updated:** May 18, 2025
+
+Thank you for using Future's Google Form Solver (the "Extension"). This Privacy Policy describes how your information is collected, used, and shared when you use the Extension.
+
+By using the Extension, you agree to the collection and use of information in accordance with this policy.
+
+## 1. Information We Collect
+
+The Extension handles the following types of information:
+
+* **User-Provided API Keys:**
+    * You may provide API keys for third-party AI services, specifically Google Gemini and OpenAI ChatGPT ("AI Services"). These keys are necessary for the Extension to communicate with the respective AI Services to generate answers.
+* **Selected API Provider Setting:**
+    * The Extension stores your preference for which AI Service (Google Gemini or OpenAI ChatGPT) you wish to use.
+* **Google Form Content:**
+    * When you activate the Extension on a Google Form, it temporarily accesses and processes the content of that form. This includes question text, multiple-choice options, and any images embedded within the questions ("Form Content").
+
+## 2. How We Use Your Information
+
+The information collected is used solely for the following purposes:
+
+* **To Provide Core Functionality:**
+    * **API Keys:** Your API keys are used exclusively to authenticate your requests with the chosen AI Service (Google Gemini or OpenAI ChatGPT). The relevant API key is transmitted to the selected AI Service when you initiate the form-solving process.
+    * **Selected API Provider Setting:** This setting is used to determine which AI Service the Extension should contact.
+    * **Form Content:** The Form Content is scraped from the active Google Form and sent to your chosen AI Service. The AI Service processes this content to generate potential answers, which are then returned to the Extension to be filled into the form.
+* **To Store Your Settings:**
+    * API keys and your selected API provider setting are stored locally on your device using `chrome.storage.local` to allow you to use the Extension across browser sessions without re-entering this information each time.
+
+## 3. Data Storage and Security
+
+* **Local Storage:** Your API keys (for Google Gemini and OpenAI ChatGPT) and your preferred API provider setting are stored locally on your computer using the `chrome.storage.local` API. This data is not transmitted to us or any third party, other than the respective API key being sent to the chosen AI Service for authentication during an API call initiated by you.
+* **Form Content:** Form Content is processed in real-time and is **not** stored by the Extension after the AI Service has provided a response and the form-filling attempt is complete for that session.
+* **Security Measures:** We take reasonable precautions to protect your information. However, no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your API keys stored locally, we cannot guarantee their absolute security. You are responsible for the security of the device on which the Extension is installed.
+
+## 4. Data Sharing and Third Parties
+
+* **AI Services (Google Gemini, OpenAI ChatGPT):**
+    * When you use the Extension, the Form Content from the active Google Form and your corresponding API key for the selected AI Service are sent to that AI Service (Google or OpenAI) for processing.
+    * Your use of these AI Services is subject to their respective privacy policies and terms of service. We encourage you to review them:
+        * Google: [Google Privacy Policy](https://policies.google.com/privacy) (and any specific terms for Gemini)
+        * OpenAI: [OpenAI Privacy Policy](https://openai.com/policies/privacy-policy)
+* **Other Third Parties:** We do **not** sell, trade, or otherwise transfer your API keys, selected API provider setting, or the Form Content to any other third parties outside of the direct interaction with your chosen AI Service as described above.
+
+## 5. User Control and Choices
+
+* **API Keys:** You have full control over providing and removing your API keys within the Extension's popup settings. If you remove an API key, it is deleted from local storage.
+* **Usage:** The Extension only activates and processes Form Content when you explicitly initiate it by clicking the "Start Solving" button.
+
+## 6. Children's Privacy
+
+The Extension is not intended for use by children under the age of 13 (or the relevant age of consent in your jurisdiction). We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and you are aware that your child has provided us with personal information (such as API keys), please contact us so that we can take necessary actions.
+
+## 7. Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the Extension or on its web store listing.
+
+You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted.
+
+## 8. Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at:
+Futuresimps@gmail.com
